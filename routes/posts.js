@@ -1,7 +1,6 @@
 const express = require('express')
 const { getPosts, addPost, editPost, deletePost } = require('../controllers/postControllers')
 const router = express.Router()
-const Post = require('../models/Post')
 
 // fetch all posts
 router.get('/', getPosts)
