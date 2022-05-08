@@ -9,7 +9,7 @@ const db = new Sequelize(process.env.DB_NAME, process.env.DB_USER, process.env.D
 })
 
 // Connecting DB with async
-const connect = async () => {
+const connect = async (db) => {
     try {
         await db.authenticate();
         console.log('Successfully connected to DB')
@@ -19,3 +19,4 @@ const connect = async () => {
 }
 
 exports.connect = connect;
+exports.db = db;
